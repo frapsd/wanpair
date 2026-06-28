@@ -5,6 +5,7 @@ wanpair — dual-target network monitor (router + internet).
 - Full UP/DOWN event logging
 """
 import subprocess
+import sys
 import time
 import os
 import re
@@ -12,6 +13,12 @@ from collections import deque
 from datetime import datetime
 import statistics
 import winsound  # Windows only
+
+if os.name == "nt":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 # ===== CONFIG =====
 ROUTER_IP = "192.168.1.254"
