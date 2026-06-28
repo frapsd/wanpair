@@ -1,0 +1,18 @@
+# Generated logs
+wanpair.log
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
